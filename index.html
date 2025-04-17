@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Toolbar -->
+        <div class="toolbar">
+            <button id="toolbar-new" class="toolbar-button" title="New File">
+                <i class="fas fa-file"></i> New
+            </button>
+            <button id="toolbar-open" class="toolbar-button" title="Open File">
+                <i class="fas fa-folder-open"></i> Open
+            </button>
+            <button id="toolbar-save" class="toolbar-button" title="Save File">
+                <i class="fas fa-save"></i> Save
+            </button>
+            <button id="toolbar-save-as" class="toolbar-button" title="Save As">
+                <i class="fas fa-save"></i> Save As
+            </button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- File Explorer Panel -->
+            <div class="file-explorer">
+                <div class="explorer-header">
+                    <h3>Explorer</h3>
+                </div>
+                <div class="file-list" id="fileList">
+                    <!-- Files will be listed here -->
+                </div>
+            </div>
+
+            <!-- Editor Panel -->
+            <div class="editor-container">
+                <div class="tabs" id="tabs">
+                    <!-- Tabs will be added here -->
+                </div>
+                <div class="editor" id="editor">
+                    <!-- Monaco editor will be mounted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load Monaco Editor -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.32.1/min/vs/loader.js"></script>
+    <script src="renderer.js"></script>
+</body>
+</html>
